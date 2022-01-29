@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="morsecss.css">
+    <title>モールス信号変換</title>
+</head>
+<body>
+    <h1>モールス信号変換</h1>
+    <p>メールなどのフッターに付けている信号を変換出来ます。<br>私(tsuttsus)がフッターにモールス信号を付ける場合、英語のものを付ける様にしています・</p>
+
+    <h2>文字(英語)から信号へ</h2>
+    <div >
+        <form id="ec" action="javascript:void(0)">
+            <input id="input" >
+            <button type="submit" onclick="conv()">変換</button>
+        </form>
+    </div>
+    <div id="sig"><p>ここに変換した信号が現れます。</p></div>
+
+    <h2>信号から英語(ローマ字)へ</h2>
+    <form id="dc" action="javascript:void(0)">
+        <input id="input2">
+        <button type="submit" onclick="de()">変換</button>
+    </form>
+    <div id="char">ここに変換した文字が現れます。</div>
+    <h2>変換テーブル</h2>
+    <p>現在は、英語と_(アンダーバー)に対応しています。今後、追加予定です。</p>
+    <div id="tables" ><p>table</p></div>
+
+    <script type="text/javascript">
+        const dic={"A":".-","B":"-...","C":"-.-.","D":"-..","E":".","F":"..-.","G":"--.","H":"....","I":"..","J":".---","K":"-.-","L":".-..","M":"--","N":"-.","O":"---","P":".--.","Q":"--.-","R":".-.","S":"...","T":"-","U":"..-","V":"...-","W":".--","X":"-..-","Y":"-.--","Z":"--..","_":"..--.-"};
+        var keys=Object.keys(dic);
+        var tables="<table><thread><tr><th>Morse Table</th></tr></thread><tbody>";
+        for(var k=0;k<keys.length;k++){
+            console.log(keys[k]);
+            tables=tables+"<tr><td>"+keys[k]+"</td><td>"+dic[keys[k]]+"</td></tr>"
+        }
+        tables=tables+"</tbody></table>"
+        console.log(tables);
+        document.getElementById("tables").innerHTML=tables;
+        
+        function conv(){
+            var str=document.getElementById("input").value;
+            str=str.toUpperCase();
+            strlist=str.split("");
+            var output="";
+            for(var i=0;i<strlist.length;i++){
+                output=output+" "+dic[strlist[i]];
+            }
+            document.getElementById("sig").innerHTML="<p>"+output+"</p>";
+        }
+        function de(){
+            var sig=document.getElementById("input2").value;
+            siglist=sig.split(" ");
+            var output="";
+            for(var i=0;i<siglist.length;i++){
+                const result=Object.keys(dic).filter((key)=>{return dic[key]===siglist[i]});
+                output=output+result
+            }
+            document.getElementById("char").innerHTML="<p>"+output+"</p>";
+        }
+    </script>
+</body>
+</html>
