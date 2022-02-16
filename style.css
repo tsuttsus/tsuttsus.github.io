@@ -117,6 +117,7 @@ footer p{
 }
 .main-contens{
     display: block;
+    text-align: center;
 }
 article{
     width:90%;
@@ -131,6 +132,7 @@ aside{
     padding-top: 4px;
     margin-bottom: 40px;
 }
+
 .post-date{
     background:#0bd;
     border-radius:50%;
@@ -155,11 +157,20 @@ aside{
     font-weight:normal;
 }
 .post-title,.post-cat{
+    text-align: center;
     margin-left:120px;
 }
 article p{
     margin-bottom:1rem;
-
+}
+.inp{
+    float:right;
+	width:80%;
+    text-align: center;   
+}
+.iinp{
+    float:left;
+	width:20%;
 }
 /*aside部分*/
 .sub-title{
@@ -181,24 +192,6 @@ article p{
 	height:100%;
 	
 	float:right;
-	width:25%;
-}
-#D #B{
-	
-	text-align:center;
-	font-size:18px;
-	height:100%;
-	
-	float:right;
-	width:75%;
-}
-#D #A{
-
-	text-align:center;
-	font-size:18px;
-	height:100%;
-	
-	float:left;
 	width:25%;
 }
 ul {
