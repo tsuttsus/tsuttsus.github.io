@@ -3,70 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tsuttsusのブログ</title>
+    <title>tsuttsusのHP</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function getdate(){
+            var text = document.getElementById("date");
+            var today=new Date();
+            var month=(today.getMonth()+1);
+            var day=today.getDate();
+            var year=today.getFullYear();
+            //text.innerHTML="<p class=\"post-date\">02/17 <span>2022</span></p>";
+            text.innerHTML="<p class=\"post-date\">"+month+"/"+day+" <span>"+year+"</span></p>";
+        }
+    </script>
 </head>
-<body>
+<body onload="getdate();">
     <div id="home" class="big-bg">
     <header class="page-header wrapper">
-        <h1>tsuttsusのブログ</h1>
+        <h1>tsuttsusのホームページ</h1>
     </header>
     <div class="archive-contents wrapper">
         <div class="main-contents" id="D">
-            <div class="ad" id="A">
-                <a href="about.html">
-                    <img src="./images/prof.jpg">
-                </a>
-            </div>
-            <div id="B">
-            <br>
-
             <article>
-                <div class="0001">
+                <div class="articlep">
                     <header class="post-info">
-                        <h2 class="post-title">モールス信号</h2>
-                        <p class="post-date">01/29 <span>2022</span></p>
-                        <p class="post-cat">カテゴリー:作成物</p>
+                        <h2 class="post-title">このページについて</h2>
+                        <div id="date">
+                            
+                        </div>
+                        <p class="post-cat">・・・・・</p>
                     </header>
-                    <p>
-                        生のJavaScriptを使用したモールス信号確認アプリの作成をしました。
-                        URLは<u><a href="./pages/morse.html">こちら</a></u>です。
-                    </p>
-                </div>
-                <div class="0000">
-                    <header class="post-info">
-                        <h2 class="post-title">初投稿</h2>
-                        <p class="post-date">12/28 <span>2020</span></p>
-                        <p class="post-cat">カテゴリー:その他</p>
-                    </header>
-                    <p>
-                        こんにちは、tsuttsusです。ブログをはじめました。<br>
-                        このブログでは、作ったものの紹介などをします。<br>
-                        よろしくお願いします。<br>
-                        自己紹介などは<u><a href="./about.html">こちら</a></u>に書いています。<br>
-                        github pagesで公開します。すみません。<br>
-                        勉強のための実験サイト兼ブログだと思ってください。<br>
-                    </p>
+                    <div class="inp">
+                        <p>
+                            ホームページをはじめました。<br>
+                            github pagesで公開しています。<br>
+                            作成物一覧はサイドバーからアクセスください。<br>
+                        </p>
+                    </div>
                 </div>
             </article>
-            </div>
-            </div>
+        </div>
         <div id="C">
         <aside>
             <h3>作成物</h3>
             <ul class="sub-menu">
                 <li><a href="./pages/morse.html">モールス信号</a></li>
+                <li><a href="http://insta-mix.herokuapp.com/">インスタグラム画像抽出</a></li>
+                <li><a href="#">Youtube Downloader</a></li>
+                <li><a href="http://ranzedaze-20.herokuapp.com/">寺田蘭世顔認識(閉鎖中)</a></li>
             </ul>
-
             <h3>アーカイブ</h3>
             <ul class="sub-menu">
-                <li><a href="./index.html#0000">初投稿</a></li>
+                <li><a href="#">・・・・・</a></li>
             </ul>
-            <h3>リンク</h3>
+            <h3>リンク集</h3>
             <ul class="sub-menu">
-                <li><a href="./about.html">About</a></li>
-                <li><a href="https://github.com/tsuttsus">Github</a></li>
+                <li><a href="./about.html">About(閉鎖中)</a></li>
+                <li><a href="https://github.com/tsuttsus">My Github</a></li>
+                <li><a href="https://www.nogizaka46.com/">乃木坂46</a></li>
+                <li><a href="https://www.hinatazaka46.com/s/official/?ima=0000">日向坂46</a></li>
             </ul>
 
         </aside>
