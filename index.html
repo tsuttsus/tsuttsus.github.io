@@ -13,8 +13,10 @@
             var month=(today.getMonth()+1);
             var day=today.getDate();
             var year=today.getFullYear();
+            var day_s=('00'+day).slice(-2);
+            var month_s=('00'+month).slice(-2);
             //text.innerHTML="<p class=\"post-date\">02/17 <span>2022</span></p>";
-            text.innerHTML="<p class=\"post-date\">"+month+"/"+day+" <span>"+year+"</span></p>";
+            text.innerHTML="<p class=\"post-date\">"+month_s+"/"+day_s+" <span>"+year+"</span></p>";
         }
     </script>
 </head>
