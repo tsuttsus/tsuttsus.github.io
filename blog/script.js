@@ -1,3 +1,4 @@
+
 function jsonOutput(){
     let request=new XMLHttpRequest();
     request.open('GET','./blog.json');
@@ -9,7 +10,7 @@ function jsonOutput(){
             let json=JSON.parse(request.responseText);
             let modal='';
             for (let i=0;i<json.length;i++){
-                let htmlParts='<h2>'+json[i].title+'</h2>'+"<p>"+json[i].text+"</p>";
+                let htmlParts='<h2>'+json[i].title+'</h2>'+"<h4>"+json[i].date+"</h4>"+"<p>"+json[i].text+"</p>";
                 html=html+htmlParts;
             }
         }
@@ -17,3 +18,9 @@ function jsonOutput(){
     };
 }
 jsonOutput();
+
+
+function gate() {
+    var UserInput = prompt("パスワードを入力して下さい:","");
+    location.href = UserInput + ".html";
+}

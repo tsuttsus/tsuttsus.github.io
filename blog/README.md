@@ -9,3 +9,7 @@
 ## 機能
 - json管理
 - jsonをhtmlで表示する機能
+
+## TODO
+- Formから取り出し
+- jsonにダンプ
